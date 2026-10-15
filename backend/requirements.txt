@@ -1,0 +1,26 @@
+fastapi[standard]
+uvicorn[standard]
+python-multipart
+pydantic
+ pydantic-settings
+pandas
+openpyxl
+numpy>=1.26.0
+# TODO: duckdb is not currently imported. Keep if large-dataset SQL querying via DuckDB is planned;
+# remove once confirmed unused.
+duckdb
+scikit-learn>=1.3.0
+statsmodels>=0.14.0
+# openai>=1.12.0 — timeout= and max_retries= constructor kwargs are available since 1.0.0;
+# current minimum version is sufficient.
+openai
+# python-dotenv is NOT needed: pydantic-settings loads .env natively via env_file in config.py.
+# Kept for one release cycle in case any external script depends on it; safe to remove after audit.
+# python-dotenv>=1.0.0
+requests>=2.31.0
+PyYAML>=6.0
+reportlab>=4.0.0
+matplotlib
+pyarrow
+python-dotenv
+inngest==0.5.19
